@@ -29,3 +29,45 @@ kmokada-ts2 | SUCCESS => {
     "changed": false, 
     "ping": "pong"
 }
+
+Run specific command
+====================
+ ansible -m command -a "hostname" all => Running command hostname
+qa066-stctlvm-a | SUCCESS | rc=0 >>
+qa066-stctlvm-a-1.eng.storvisor.com
+
+qa066-stctlvm-b | SUCCESS | rc=0 >>
+qa066-stctlvm-b-1.eng.storvisor.com
+
+qa066-stctlvm-c | SUCCESS | rc=0 >>
+qa066-stctlvm-c-1.eng.storvisor.com
+
+qa066-stctlvm-d | SUCCESS | rc=0 >>
+qa066-stctlvm-d-1.eng.storvisor.com
+
+kmokada-ts2 | SUCCESS | rc=0 >>
+kmokada-ts2
+
+  OR
+  ==
+ansible -a "hostname" all
+qa066-stctlvm-a | SUCCESS | rc=0 >>
+qa066-stctlvm-a-1.eng.storvisor.com
+
+qa066-stctlvm-d | SUCCESS | rc=0 >>
+qa066-stctlvm-d-1.eng.storvisor.com
+
+qa066-stctlvm-c | SUCCESS | rc=0 >>
+qa066-stctlvm-c-1.eng.storvisor.com
+
+qa066-stctlvm-b | SUCCESS | rc=0 >>
+qa066-stctlvm-b-1.eng.storvisor.com
+
+kmokada-ts2 | SUCCESS | rc=0 >>
+kmokada-ts2
+
+
+  
+  
+
+
