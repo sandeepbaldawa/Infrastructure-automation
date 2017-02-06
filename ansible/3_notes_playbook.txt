@@ -1,12 +1,12 @@
 
-cat hostname.yml 
+cat hostname.yml ==> yaml file for commands
 ---
 - hosts: all 
   tasks:
   - command: hostname
 
 
-ansible-playbook hostname.yml 
+ansible-playbook hostname.yml  ==> Executing the yaml
 
 PLAY [all] *********************************************************************
 
