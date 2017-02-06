@@ -1,4 +1,4 @@
-Providing ansible hosts file explicitly
+List ansible hosts file explicitly
 =======================================
 ansible -i test_machines --list-hosts all 
 
@@ -9,8 +9,7 @@ cat test_machines ==> hosts file
   qa066-stctlvm-c
   qa066-stctlvm-d
   
-
-Providing ansible hosts file implicitly
+List ansible hosts file implicitly
 =======================================
 
 Define hosts file in below
@@ -26,5 +25,15 @@ ansible --list-hosts all
     qa066-stctlvm-c
     qa066-stctlvm-d
     Ruchitas-MacBook-Pro.local=local
+ 
+List certain machines in the host file
+=======================================
+ansible --list-hosts launcher  => List launcher machines
+ansible --list-hosts launcher
+  hosts (1):
+    Ruchitas-MacBook-Pro.local=local
+
+    
+    
 
 
