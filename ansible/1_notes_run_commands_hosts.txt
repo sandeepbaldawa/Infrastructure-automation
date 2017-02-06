@@ -1,0 +1,31 @@
+Check if hosts are alive
+========================
+For default user add the below
+
+cat /etc/ansible/ansible.cfg 
+[defaults]
+inventory = ./test_machines
+remote_user = root
+
+
+ansible -m ping all
+qa066-stctlvm-d | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+qa066-stctlvm-a | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+qa066-stctlvm-b | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+qa066-stctlvm-c | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+kmokada-ts2 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
