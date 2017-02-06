@@ -26,12 +26,26 @@ ansible --list-hosts all
     qa066-stctlvm-d
     Ruchitas-MacBook-Pro.local=local
  
-List certain machines in the host file
-=======================================
+List certain machines in the host file(depending on the category)
+=================================================================
 ansible --list-hosts launcher  => List launcher machines
 ansible --list-hosts launcher
   hosts (1):
     Ruchitas-MacBook-Pro.local=local
+    
+    
+List certain machines in the host file(depending on the category regex)
+=================================================================
+ansible --list-hosts [controllers:launcher] => Both controller and lunacher
+ansible --list-hosts controller0*           => Match this
+ansible --list-hosts controllers[0]         => Select first host in category controller 
+  hosts (1):
+    qa066-stctlvm-a
+ansible --list-hosts \!controllers          => List everything not in controllers category 
+  hosts (1):
+    Ruchitas-MacBook-Pro.local=local
+    
+    
 
     
     
