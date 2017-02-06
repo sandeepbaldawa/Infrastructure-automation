@@ -1,3 +1,5 @@
+Providing ansible hosts file explicitly
+=======================================
 ansible -i test_machines --list-hosts all 
 
 cat test_machines ==> hosts file
@@ -6,4 +8,23 @@ cat test_machines ==> hosts file
   qa066-stctlvm-b
   qa066-stctlvm-c
   qa066-stctlvm-d
+  
+
+Providing ansible hosts file implicitly
+=======================================
+
+Define hosts file in below
+cat /etc/ansible/ansible.cfg 
+[defaults]
+inventory = ./test_machines
+
+
+ansible --list-hosts all 
+  hosts (5):
+    qa066-stctlvm-a
+    qa066-stctlvm-b
+    qa066-stctlvm-c
+    qa066-stctlvm-d
+    Ruchitas-MacBook-Pro.local=local
+
 
