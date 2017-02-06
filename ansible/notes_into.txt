@@ -1,0 +1,9 @@
+ansible -i test_machines --list-hosts all 
+
+cat test_machines ==> hosts file
+  [controllers]
+  qa066-stctlvm-a
+  qa066-stctlvm-b
+  qa066-stctlvm-c
+  qa066-stctlvm-d
+
