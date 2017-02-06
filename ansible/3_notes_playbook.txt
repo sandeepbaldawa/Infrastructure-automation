@@ -1,1 +1,33 @@
 
+cat hostname.yml 
+---
+- hosts: all 
+  tasks:
+  - command: hostname
+
+
+ansible-playbook hostname.yml 
+
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+ok: [qa066-stctlvm-a]
+ok: [qa066-stctlvm-b]
+ok: [qa066-stctlvm-c]
+ok: [qa066-stctlvm-d]
+ok: [kmokada-ts2]
+
+TASK [command] *****************************************************************
+changed: [qa066-stctlvm-a]
+changed: [qa066-stctlvm-c]
+changed: [qa066-stctlvm-d]
+changed: [kmokada-ts2]
+changed: [qa066-stctlvm-b]
+
+PLAY RECAP *********************************************************************
+kmokada-ts2                : ok=2    changed=1    unreachable=0    failed=0   
+qa066-stctlvm-a            : ok=2    changed=1    unreachable=0    failed=0   
+qa066-stctlvm-b            : ok=2    changed=1    unreachable=0    failed=0   
+qa066-stctlvm-c            : ok=2    changed=1    unreachable=0    failed=0   
+qa066-stctlvm-d            : ok=2    changed=1    unreachable=0    failed=0   
+
