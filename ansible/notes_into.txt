@@ -1,3 +1,6 @@
+A. Select subsets of hosts
+===========================
+
 List ansible hosts file explicitly
 =======================================
 ansible -i test_machines --list-hosts all 
