@@ -1,0 +1,6 @@
+- Start tasks stepwise and ignore or run task selectively..
+ansible script.yml --step
+
+-- Run only a specific task
+ansible script.yml --list-tasks
+ansible script.yml --start-at-task=my_task
