@@ -1,10 +1,17 @@
 - Start tasks stepwise and ignore or run task selectively..
-ansible script.yml --step
+ansible-playbook script.yml --step
 
 - Run only a specific task
-ansible script.yml --list-tasks
-ansible script.yml --start-at-task=my_task
+ansible-playbook script.yml --list-tasks
+ansible-playbook script.yml --start-at-task=my_task
 
 - Retry script only for the failed set of hosts and not for all (very useful in ennvironment with large no of hosts)
 Only failure a script.try is generated and one can just run that which contains name of the host that failed..
-i.e. ansible script.retry
+i.e. ansible-playbook script.retry
+
+- Static check for a playbook syntax
+ansible-playbook --syntax-check script.yml
+
+- Synamic run time check for a playbook
+ansible-playbook --check script.yml 
+Actually runs the scripts but in a stub way(not actually running the script, but running as an empty stub),
