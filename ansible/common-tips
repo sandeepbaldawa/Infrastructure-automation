@@ -23,3 +23,6 @@ debug var=my_var.stdout
 - Print all variables at a point in code
 Use debug module
 debug var=vars
+
+- iptables module
+http://blog.nordeus.com/dev-ops/managing-iptables-with-ansible-the-easy-way.htm
