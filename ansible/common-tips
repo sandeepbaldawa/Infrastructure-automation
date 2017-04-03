@@ -12,6 +12,14 @@ i.e. ansible-playbook script.retry
 - Static check for a playbook syntax
 ansible-playbook --syntax-check script.yml
 
-- Synamic run time check for a playbook
+- Dynamic run time check for a playbook
 ansible-playbook --check script.yml 
 Actually runs the scripts but in a stub way(not actually running the script, but running as an empty stub),
+
+- Print a variable value at a point in code
+Use debug module
+debug var=my_var.stdout
+
+- Print all variables at a point in code
+Use debug module
+debug var=vars
