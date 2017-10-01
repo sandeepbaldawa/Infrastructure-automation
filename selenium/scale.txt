@@ -1,2 +1,3 @@
 => Selenium with Docker
 https://confengine.com/selenium-conf-2015/proposal/1365/docker-selenium-getting-started
+https://www.youtube.com/embed/cbIfU1fvGeo?feature=oembed
