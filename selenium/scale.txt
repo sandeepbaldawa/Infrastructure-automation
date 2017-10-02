@@ -5,3 +5,4 @@ https://github.com/aerokube/ggr
 Best => https://www.slideshare.net/slideshow/embed_code/key/H7QmI1pAf2r9u7?feature=oembed
 https://github.com/grosser/parallel_tests
 
+https://blog.codecentric.de/en/2015/10/continuous-integration-platform-using-docker-container-jenkins-sonarqube-nexus-gitlab/
